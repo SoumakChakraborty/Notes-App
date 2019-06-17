@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>View page</title>
+        <link rel="stylesheet" href="/css/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Jura&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    </head>
+    <body id="landing">
+       <%if(msg&&msg.length>0){%>
+        <div id="showerror"><%=msg%></div> 
+       <%}%> 
+        <div id="note-view">
+            <p><strong>Name</strong> - <%=note[0].note_name%></p>
+            <p><strong>Content</strong> - <%=note[0].note_text%></p>
+            <div class="edit">
+               <a href="/edit/<%=note[0].noteID%>">Edit note</a> 
+            </div>
+            <form action="/search/<%=note[0].noteID%>" method="POST">
+              <input type="text" name="word" id="word" placeholder="Enter text you want to replace" required>
+              <input type="text" name="replace" id="replace" placeholder="Enter text with which you want to replace" required><br>
+              <input type="submit" value="Find and replace" id="submit1">
+            </form>
+        </div>
+    </body>
+</html>

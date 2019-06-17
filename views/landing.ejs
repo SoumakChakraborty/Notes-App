@@ -1,0 +1,31 @@
+<html lang="en">
+    <head>
+        <title>Landing page</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="stylesheet" href="/css/style.css">
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Jura&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    </head>
+    <body id="landing">
+        <nav id="navbar">
+           <div id="app-name">
+               <a href="#">NoteApp</a>
+           </div>
+           <div id="user-options">
+               <a href="#">Sign In</a>
+           </div>
+        </nav>
+        <%if(msg&&msg.length){%>
+            <div id="showerror"><%=msg%></div>
+        <%}%>    
+        <div class="formdiv">
+        </div>
+            <script src="/scripts/show.js"></script>   
+    </body>
+</html>
